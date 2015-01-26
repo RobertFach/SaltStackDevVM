@@ -4,4 +4,6 @@ pycrypto
 msgpack-python
 jinja2
 psutil
+Sphinx==1.3b2
 -e ./salt
+git+https://github.com/saltstack/salt-testing.git#egg=SaltTesting
