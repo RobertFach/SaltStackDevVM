@@ -46,15 +46,15 @@ ensure that salt virtualenv for testing is created:
 # cp ./salt/conf/master ./salt/conf/minion /path/to/your/virtualenv/etc/salt/
 ensure that salt master config for testing is copied:
   file.copy:
-    - name: /home/{{user}}/salt.virtenv/etc/salt/master
-    - source: /home/{{user}}/salt/conf/master
+    - name: /home/{{DEV_USER}}/{{VIRTUAL_ENV_NAME}}/etc/salt/master
+    - source: /home/{{DEV_USER}}/{{GIT_REPO_TARGET}}/conf/master
     - preserve: True
     - makedirs: True
 
 ensure that salt minion config for testing is copied:
   file.copy:
-    - name: /home/{{user}}/salt.virtenv/etc/salt/minion
-    - source: /home/{{user}}/salt/conf/minion
+    - name: /home/{{DEV_USER}}/{{VIRTUAL_ENV_NAME}}/etc/salt/minion
+    - source: /home/{{DEV_USER}}/{{GIT_REPO_TARGET}}/conf/minion
     - preserve: True
     - makedirs: True
 
