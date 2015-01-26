@@ -3,17 +3,17 @@ SaltStackDevVM
 This is a Virtual Machine that can be used for Salt development which gets configured via Vagrant and Salt. 
 
 Dependencies
-============
+=========
 - https://www.vagrantup.com/
 - https://www.virtualbox.org/ (In principle Vagrant is not limited to VirtualBox!)
 
 Installation
-============
+=========
 - Install Vagrant by downloading the installer or your package management system.
 - Install VirtualBox...
 
 Basic Usage
------------
+=========
 For each development environment/machine which you want to use, you have to clone a fresh copy of that repository.
 Go into the cloned Repository root folder which contains the Vagrantfile. Start a new developer vm by calling:
 
@@ -46,7 +46,7 @@ You can use that virtual environment by calling:
 After that, your salt commands will execute the develop version...
 
 Disclaimer
-==========
+=========
 Note that documentation is not yet complete, nor is everything yet finished.
 
 Therefore, feel free to make suggestions, comments, critiques, etc.
@@ -54,5 +54,5 @@ Therefore, feel free to make suggestions, comments, critiques, etc.
 Thanks for developing salt and all the other great tools!!
 
 References
-----------
+=========
 See also https://github.com/RobertFach/vagrant-dev-vm-reactor to get a feeling how Vagrant can be used with Salt.
