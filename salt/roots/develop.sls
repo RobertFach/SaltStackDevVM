@@ -30,7 +30,7 @@ python-dev:
 
 ensure that salt virtualenv for developing is created:
   virtualenv.managed:
-    - name: /home/{{DEV_USER}}/{{VIRTUAL_ENV_NAME}}:
+    - name: /home/{{DEV_USER}}/{{VIRTUAL_ENV_NAME}}
     - cwd: /home/{{DEV_USER}}
     - user: {{DEV_USER}}
     - system_site_packages: False
