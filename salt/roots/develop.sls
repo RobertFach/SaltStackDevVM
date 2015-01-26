@@ -29,3 +29,17 @@ python-dev:
     - user: {{user}}
     - system_site_packages: False
     - requirements: salt://virtualenv.txt
+
+# cp ./salt/conf/master ./salt/conf/minion /path/to/your/virtualenv/etc/salt/
+/home/{{user}}/salt.virtenv/etc/salt/master:
+  file.copy:
+    - source: /home/{{user}}/salt/conf/master
+    - preserve: True
+    - makedirs: True
+
+/home/{{user}}/salt.virtenv/etc/salt/minion:
+  file.copy:
+    - source: /home/{{user}}/salt/conf/minion
+    - preserve: True
+    - makedirs: True
+
