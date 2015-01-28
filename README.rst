@@ -9,7 +9,7 @@ Dependencies
 
 Installation
 =========
-- Install Vagrant by downloading the installer or your package management system.
+- Install Vagrant by downloading the installer or by using your package management system.
 - Install VirtualBox...
 
 Basic Usage
@@ -35,7 +35,7 @@ You can connect to a bootstrapped VM by calling:
 
     vagrant ssh
 
-Right now, the VM is prepared with the develop branch under ``/home/vagrant/salt``. It also sets up a virtual environment where the latest salt develop version has been installed into it.
+Right now, the VM is prepared with the develop branch under ``/home/vagrant/salt``. It also sets up a virtual environment under ``/home/vagrant/virtualenv`` where the latest salt develop version has been installed into it.
 
 You can use that virtual environment by calling:
 
@@ -44,6 +44,27 @@ You can use that virtual environment by calling:
     ./virtualenv/bin/activate
 
 After that, your salt commands will execute the develop version...
+
+Configuration
+=========
+It is possible to configure the environment by changing the pillar configuration. The pillar data is stored on the host in the git repository under ``./salt/pillar/config.sls``. Right now, the following options are supported
+
+.. code-block:: bash
+
+  gitrepo:
+   lookup:
+    origin: https://github.com/saltstack/salt.git
+    branch: 2014.7
+    target: salt
+
+  user:
+   lookup:
+    name: vagrant
+
+  virtualenv:
+   lookup:
+    name: virtualenv 
+
 
 Disclaimer
 =========
