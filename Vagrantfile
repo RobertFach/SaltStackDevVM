@@ -54,16 +54,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   vb.customize ["modifyvm", :id, "--memory", "1024"]
   # end
   #
-  GIT_ORIGIN="https://github.com/saltstack/salt"
-  GIT_BRANCH="2014.7"
+  GIT_REPO_ORIGIN="https://github.com/saltstack/salt"
+  GIT_REPO_BRANCH="2014.7"
 
   config.vm.synced_folder "salt/roots/", "/srv/salt/"
 
   config.vm.provision :salt do |salt|
     salt.minion_config = "salt/minion"
     salt.pillar({ 
-        "GIT_BRANCH" => GIT_BRANCH
-        "GIT_ORIGIN" => GIT_ORIGIN
+        "GIT_REPO" => {
+           "BRANCH" => GIT_REPO_BRANCH,
+           "ORIGIN" => GIT_REPO_ORIGIN
+        }
     })
     salt.run_highstate = true
   end
