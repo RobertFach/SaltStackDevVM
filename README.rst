@@ -15,7 +15,7 @@ Installation
 Basic Usage
 =========
 For each development environment/machine which you want to use, you have to clone a fresh copy of that repository.
-Go into the cloned Repository root folder which contains the Vagrantfile. Start a new developer vm by calling:
+Feel free to configure your development machine by modifying the available configuration pillars, see also the configuration section for more information. Go into the cloned Repository root folder which contains the Vagrantfile. Start a new developer vm by calling:
 
 .. code-block:: bash
 
